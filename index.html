@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chấp Niệm Review - Kho Phim 3D</title>
+  <meta name="description" content="Kho phim 2D, 3D và siêu thực - Chấp Niệm Review">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="side-title">☷ &nbsp; THỂ LOẠI PHIM</div>
+      <button class="category active" data-category="Tất cả">Tất cả</button>
+      <button class="category" data-category="Hoàn Thành">Hoàn Thành</button>
+      <button class="category" data-category="Nữ Chính">Nữ Chính</button>
+      <button class="category" data-category="Nam Chính">Nam Chính</button>
+      <button class="category" data-category="Tu Tiên">Tu Tiên</button>
+      <button class="category" data-category="Võ Hiệp">Võ Hiệp</button>
+      <button class="category" data-category="Xuyên Không">Xuyên Không</button>
+      <button class="category" data-category="Hài Hước">Hài Hước</button>
+      <button class="category" data-category="Tình Cảm">Tình Cảm</button>
+      <button class="category" data-category="Hệ Thống">Hệ Thống</button>
+      <button class="category" data-category="Hiện Đại">Hiện Đại</button>
+      <button class="category" data-category="Vô Địch">Vô Địch</button>
+      <button class="category" data-category="Kinh Dị">Kinh Dị</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Tìm kiếm phim, diễn viên, nội dung...">
+        </div>
+
+        <nav class="tabs">
+          <button class="tab active">Phim 2D</button>
+          <button class="tab active-yellow">Phim 3D</button>
+          <button class="tab">Siêu thực</button>
+          <button class="tab" id="savedTab">♡ Đã lưu</button>
+        </nav>
+
+        <div class="toolbar">
+          <button id="gridBtn" class="tool-btn">▦ Chụp 3×3</button>
+          <button class="tool-btn">Tùy chọn</button>
+          <label class="sort-label">☷ Sắp xếp:
+            <select id="sortSelect">
+              <option value="new">Mới nhất</option>
+              <option value="name">Tên A-Z</option>
+              <option value="duration">Thời lượng</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <section id="movieGrid" class="movie-grid"></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <article class="detail">
+      <button class="close" id="closeModal">×</button>
+      <div id="detailHero" class="detail-hero">
+        <div class="detail-overlay">
+          <div id="detailTags" class="tags"></div>
+          <h1 id="detailTitle"></h1>
+          <p id="detailOriginal"></p>
+          <p class="duration">◷ Tổng thời lượng: <b id="detailDuration"></b></p>
+        </div>
+      </div>
+
+      <div class="detail-body">
+        <h3>GIỚI THIỆU PHIM</h3>
+        <p id="detailDescription" class="description"></p>
+        <button id="moreBtn" class="more">Xem chi tiết⌄</button>
+
+        <div class="detail-actions">
+          <button class="outline" id="saveDetail">♡ Lưu Phim</button>
+          <a class="telegram" href="#" onclick="return false;">◉ Vào nhóm Telegram</a>
+          <a class="messenger" href="#" onclick="return false;">● Vào Nhóm Messenger</a>
+        </div>
+
+        <h3>DANH SÁCH TẬP PHIM</h3>
+        <div id="episodes" class="episodes"></div>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <span>© 2026 Chấp Niệm Review</span>
+    <span>Website mẫu miễn phí • Bạn có thể thay toàn bộ nội dung</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
